@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Analytics Demo</title>
+  
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBZ8QNS3CH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VBZ8QNS3CH');
+  </script>
+
+  <!-- Microsoft Clarity (for heatmaps) -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "G-VBZ8QNS3CH");
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 20px 0;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Web Analytics Demo Page</h1>
+  <p>This page demonstrates basic web analytics setup using Google Analytics and Microsoft Clarity.</p>
+
+  <!-- Click Tracking Example -->
+  <button onclick="gtag('event', 'download_click', {
+    'event_category': 'Downloads',
+    'event_label': 'Demo PDF',
+    'value': 1
+  });">
+    Download PDF
+  </button>
+
+  <!-- Add more sections here -->
+  <p>Try clicking around and scrolling. Clarity will show heatmaps and recordings.</p>
+
+</body>
+</html>
